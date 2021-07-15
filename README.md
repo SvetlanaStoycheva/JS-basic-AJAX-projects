@@ -25,10 +25,11 @@
     <img src='ReadMe-IMAGES/2.png' width='200'>
 </p>
 
-3. Chuck Norris Jokes Generator
+3. Cocktails Api
 
-- When we click a button the color background will change and the applied color will be shown in the window
-- We have two set ups: simple, using fixed array with a fixed amount of items. And the second, where we will generate the hex colors on the fly
+- search for your favourite cocktail by typing the name in the search form; event on when we are typing
+- when clicked on a cocktail, detail page is opening
+- external Api: https://www.thecocktaildb.com
 
 <p align-items: center>
     <img src='ReadMe-IMAGES/3.png' width='200'>
