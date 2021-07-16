@@ -27,9 +27,9 @@
 
 3. Cocktails Api
 
-- search for your favourite cocktail by typing the name in the search form; event on when we are typing
-- when clicked on a cocktail, detail page is opening
-- external Api: https://www.thecocktaildb.com
+- Search for your favourite cocktail by typing the name in the search form; event on when we are typing
+- When clicked on a cocktail, detail page is opening. Using locale storage to pass data between modules
+- External Api: https://www.thecocktaildb.com
 
 <p align-items: center>
     <img src='ReadMe-IMAGES/3.png' width='200'>
