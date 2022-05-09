@@ -34,3 +34,14 @@
 <p align-items: center>
     <img src='ReadMe-IMAGES/3.png' width='200'>
 </p>
+
+3. Products Api
+
+- Fetch products from an API, display them on the home page. On click on the certain product we open a detailed product page. We fetch a detailed info about the specific product.
+
+<p align-items: center>
+    <img src='ReadMe-IMAGES/4.png' width='200'>
+</p>
+<p align-items: center>
+    <img src='ReadMe-IMAGES/5.png' width='200'>
+</p>
