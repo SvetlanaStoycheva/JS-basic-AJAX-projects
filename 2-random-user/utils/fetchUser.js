@@ -1,36 +1,33 @@
 const URL = 'https://randomuser.me/api/';
 
-async function getUser() {
-  try {
-    const response = await fetch(URL);
-    const data = await response.json();
-    const result = data.results[0];
+const getUser = async () => {
+  const response = await fetch(URL);
+  const data = await response.json();
+  const person = data.results[0];
+  console.log(person);
 
-    const {
-      dob: { age },
-      email,
-      login: { username },
-      location,
-      name,
-      phone,
-      picture: { large },
-    } = result;
-    const { first, last } = name;
-    const fullName = `${first} ${last}`;
-    const { city, country } = location;
-    const address = `${city}, ${country}`;
-    return {
-      age,
-      email,
-      address,
-      name: fullName,
-      phone,
-      image: large,
-      username,
-    };
-    // displayData(result);
-  } catch (error) {
-    return error;
-  }
-}
+  const {
+    email,
+    phone,
+    picture: { large: personImg },
+    login: { username },
+    name: { first: firstName, last: lastName },
+    dob: { age },
+    location: {
+      street: { name: streetName, number: streetNumber },
+    },
+  } = person;
+
+  //the properties names that we return should match the data-lable in the html
+  return {
+    email,
+    phone,
+    personImg,
+    username,
+    name: `${firstName} ${lastName}`,
+    street: `${streetNumber} ${streetName}`,
+    age,
+  };
+};
+
 export default getUser;

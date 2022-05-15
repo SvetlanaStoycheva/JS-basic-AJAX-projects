@@ -35,7 +35,7 @@
     <img src='ReadMe-IMAGES/3.png' width='200'>
 </p>
 
-3. Products Api
+4. Products Api
 
 - Fetch products from an API, display them on the home page. On click on the certain product we open a detailed product page. We fetch a detailed info about the specific product.
 
