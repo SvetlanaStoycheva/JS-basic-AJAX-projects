@@ -1,28 +1,30 @@
-import getElement from './getElement.js';
+import get from '../src/getElement.js';
 
-const displayDrinks = (drinks) => {
-  const section = getElement('.section-center');
-  const title = getElement('.title');
+const displayDrinks = ({ drinks }) => {
+  const section = get('.section-center');
+  const title = get('.title');
+
+  //when the search doesn't give a result => we set a message and clear the section
   if (!drinks) {
-    // hide loading
-
-    title.textContent = 'sorry, no drinks matched your search';
+    title.textContent = 'Sorry, no drinks matched your search';
     section.innerHTML = null;
     return;
   }
   const newDrinks = drinks
     .map((drink) => {
-      const { idDrink: id, strDrink: name, strDrinkThumb: image } = drink;
+      const { idDrink: id, strDrinkThumb: img, strDrink: name } = drink;
 
-      return `<a href="drink.html">
+      return `
+      <a href="drink.html">
           <article class="cocktail" data-id="${id}">
-            <img src="${image}" alt="${name}" />
+            <img src="${img}" alt="${name}"/>
             <h3>${name}</h3>
           </article>
-        </a>`;
+        </a>
+      `;
     })
     .join('');
-
+  //hide loading
   title.textContent = '';
   section.innerHTML = newDrinks;
   return section;

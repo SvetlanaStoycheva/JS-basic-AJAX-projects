@@ -1,10 +1,11 @@
-import getElement from './getElement.js';
-const loading = getElement('.loading');
+import get from '../src/getElement.js';
+
+const loadingImg = get('.loading');
 
 export const showLoading = () => {
-  loading.classList.remove('hide-loading');
+  loadingImg.classList.remove('hide-loading');
 };
 
 export const hideLoading = () => {
-  loading.classList.add('hide-loading');
+  loadingImg.classList.add('hide-loading');
 };

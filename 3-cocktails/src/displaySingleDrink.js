@@ -3,34 +3,36 @@ import get from './getElement.js';
 
 const displayDrink = (data) => {
   hideLoading();
-
-  const { strDrinkThumb: image, strDrink: name, strInstructions: desc } = data;
-  let list = [
-    data.strIngredient1,
-    data.strIngredient2,
-    data.strIngredient3,
-    data.strIngredient4,
-    data.strIngredient5,
+  const drink = data.drinks[0];
+  //   console.log(drink);
+  const {
+    strDrinkThumb: image,
+    strDrink: name,
+    strInstructionsIT: desc,
+  } = drink;
+  const list = [
+    drink.strIngredient1,
+    drink.strIngredient2,
+    drink.strIngredient3,
+    drink.strIngredient4,
+    drink.strIngredient5,
   ];
-  list = list.filter((item) => item !== null);
-  //   console.log(data, list);
+
   const img = get('.drink-img');
   const drinkName = get('.drink-name');
   const description = get('.drink-desc');
   const ingredients = get('.drink-ingredients');
-  img.src = image;
+
   document.title = name;
+  img.src = image;
   drinkName.textContent = name;
   description.textContent = desc;
-
-  //   list.forEach((item) => {
-  //     const li = document.createElement('li');
-  //     li.textContent = item;
-  //     ingredients.appendChild(li);
-  //   });
   ingredients.innerHTML = list
     .map((item) => {
-      return `<li><i class='far fa-check-square'></i>${item}</li>`;
+      if (!item) return;
+      return `
+      <li><i class="far fa-check-square"></i>${item}</li>
+      `;
     })
     .join('');
 };

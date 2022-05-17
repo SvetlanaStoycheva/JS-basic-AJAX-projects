@@ -1,17 +1,18 @@
-import { showLoading } from './toggleLoading.js';
-import { hideLoading } from './toggleLoading.js';
+import { showLoading } from '../src/toggleLoading.js';
+import { hideLoading } from '../src/toggleLoading.js';
+import showDrinks from './presentDrinks.js';
 
-async function fetchDrinks(url) {
+const fetchDrinks = async (url) => {
+  showLoading();
   try {
-    showLoading();
     const response = await fetch(url);
     const data = await response.json();
     hideLoading();
     return data;
   } catch (error) {
     console.log(error);
-    hideLoading();
+    showLoading();
   }
-}
+};
 
 export default fetchDrinks;

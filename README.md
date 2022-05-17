@@ -34,6 +34,12 @@
 <p align-items: center>
     <img src='ReadMe-IMAGES/3.png' width='200'>
 </p>
+<p align-items: center>
+    <img src='ReadMe-IMAGES/3_2.png' width='200'>
+</p>
+<p align-items: center>
+    <img src='ReadMe-IMAGES/3_3.png' width='200'>
+</p>
 
 4. Products Api
 

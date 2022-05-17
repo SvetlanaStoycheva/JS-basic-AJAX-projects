@@ -1,7 +1,8 @@
-import presentDrinks from './src/presentDrinks.js';
+import presentDriks from './src/presentDrinks.js';
 import './src/searchForm.js';
 
-const URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=m';
+const URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=a';
+
 window.addEventListener('DOMContentLoaded', () => {
-  presentDrinks(URL);
+  presentDriks(URL);
 });
