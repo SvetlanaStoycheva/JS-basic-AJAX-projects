@@ -52,7 +52,7 @@
     <img src='ReadMe-IMAGES/5.png' width='200'>
 </p>
 
-4. Products Api
+4. Pagination
 
 - Fetching github followers and set up pagination, so that 10 people are displayed per page. Dynamically changing the number of displayed people. Working with modules.
 - Prev and next page buttons
